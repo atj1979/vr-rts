@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "cellSizeMeters": 1,
+  "axis": {
+    "up": "Y",
+    "forward": "Z"
+  },
+  "note": "A listed glb is loaded when the file exists. Missing files use the procedural placeholder with the same id.",
+  "assets": [
+    {
+      "id": "courier",
+      "category": "units",
+      "glb": "assets/units/courier/courier.glb",
+      "sidecar": "assets/units/courier/courier.json"
+    },
+    {
+      "id": "dart",
+      "category": "units",
+      "glb": "assets/units/dart/dart.glb",
+      "sidecar": "assets/units/dart/dart.json"
+    },
+    {
+      "id": "rampart",
+      "category": "units",
+      "glb": "assets/units/rampart/rampart.glb",
+      "sidecar": "assets/units/rampart/rampart.json"
+    },
+    {
+      "id": "foundry",
+      "category": "buildings",
+      "glb": "assets/buildings/foundry/foundry.glb",
+      "sidecar": "assets/buildings/foundry/foundry.json"
+    },
+    {
+      "id": "armory",
+      "category": "buildings",
+      "glb": "assets/buildings/armory/armory.glb",
+      "sidecar": "assets/buildings/armory/armory.json"
+    },
+    {
+      "id": "waystation",
+      "category": "buildings",
+      "glb": "assets/buildings/waystation/waystation.glb",
+      "sidecar": "assets/buildings/waystation/waystation.json"
+    },
+    {
+      "id": "shardglass",
+      "category": "resources",
+      "glb": "assets/resources/shardglass/shardglass.glb",
+      "sidecar": "assets/resources/shardglass/shardglass.json"
+    },
+    {
+      "id": "fluxwell",
+      "category": "resources",
+      "glb": "assets/resources/fluxwell/fluxwell.glb",
+      "sidecar": "assets/resources/fluxwell/fluxwell.json"
+    }
+  ]
+}

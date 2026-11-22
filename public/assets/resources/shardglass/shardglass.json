@@ -1,0 +1,43 @@
+{
+  "id": "shardglass",
+  "category": "resources",
+  "footprint": [
+    2,
+    2
+  ],
+  "boundingRadius": 0.9,
+  "attachments": {
+    "muzzle": [
+      0,
+      0.8,
+      0
+    ],
+    "carry": [
+      0,
+      0.55,
+      0.35
+    ],
+    "selection_ring": [
+      0,
+      0.03,
+      0
+    ]
+  },
+  "lods": [
+    "shardglass_lod0",
+    "shardglass_lod1"
+  ],
+  "animations": [
+    "idle",
+    "walk",
+    "run",
+    "attack",
+    "death",
+    "build",
+    "gather",
+    "work"
+  ],
+  "facing": "+Z",
+  "up": "+Y",
+  "units": "meters"
+}

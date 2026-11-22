@@ -1,0 +1,14 @@
+{
+  "entries": ["src/wasm/assembly/nav.ts"],
+  "targets": {
+    "release": {
+      "outFile": "src/wasm/pkg/nav.wasm",
+      "bindings": "raw",
+      "optimizeLevel": 3,
+      "shrinkLevel": 1,
+      "noAssert": true,
+      "initialMemory": 2,
+      "maximumMemory": 16
+    }
+  }
+}

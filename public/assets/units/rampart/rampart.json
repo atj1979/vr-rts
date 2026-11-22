@@ -1,0 +1,43 @@
+{
+  "id": "rampart",
+  "category": "units",
+  "footprint": [
+    1,
+    1
+  ],
+  "boundingRadius": 0.48,
+  "attachments": {
+    "muzzle": [
+      0,
+      0.55,
+      0.62
+    ],
+    "carry": [
+      0,
+      0.45,
+      0
+    ],
+    "selection_ring": [
+      0,
+      0.03,
+      0
+    ]
+  },
+  "lods": [
+    "rampart_lod0",
+    "rampart_lod1"
+  ],
+  "animations": [
+    "idle",
+    "walk",
+    "run",
+    "attack",
+    "death",
+    "build",
+    "gather",
+    "work"
+  ],
+  "facing": "+Z",
+  "up": "+Y",
+  "units": "meters"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "foundry",
+  "category": "buildings",
+  "footprint": [
+    3,
+    3
+  ],
+  "boundingRadius": 2.1,
+  "attachments": {
+    "muzzle": [
+      0,
+      1.6,
+      0
+    ],
+    "carry": [
+      0,
+      0.4,
+      1.2
+    ],
+    "selection_ring": [
+      0,
+      0.04,
+      0
+    ]
+  },
+  "lods": [
+    "foundry_lod0",
+    "foundry_lod1"
+  ],
+  "animations": [
+    "idle",
+    "walk",
+    "run",
+    "attack",
+    "death",
+    "build",
+    "gather",
+    "work"
+  ],
+  "facing": "+Z",
+  "up": "+Y",
+  "units": "meters"
+}

@@ -1,0 +1,27 @@
+{
+  "name": "vr-rts",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Glassreach — an original tabletop VR real-time strategy game.",
+  "scripts": {
+    "build:wasm": "asc --config asconfig.json --target release",
+    "dev": "npm run build:wasm && vite",
+    "build": "npm run build:wasm && tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "npm run build:wasm && node --experimental-strip-types tests/sim.spec.ts"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "@types/three": "^0.187.0",
+    "assemblyscript": "^0.28.20",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.8"
+  }
+}
