@@ -1,0 +1,43 @@
+{
+  "id": "waystation",
+  "category": "buildings",
+  "footprint": [
+    2,
+    2
+  ],
+  "boundingRadius": 1.2,
+  "attachments": {
+    "muzzle": [
+      0,
+      1.35,
+      0
+    ],
+    "carry": [
+      0,
+      0.35,
+      0.7
+    ],
+    "selection_ring": [
+      0,
+      0.04,
+      0
+    ]
+  },
+  "lods": [
+    "waystation_lod0",
+    "waystation_lod1"
+  ],
+  "animations": [
+    "idle",
+    "walk",
+    "run",
+    "attack",
+    "death",
+    "build",
+    "gather",
+    "work"
+  ],
+  "facing": "+Z",
+  "up": "+Y",
+  "units": "meters"
+}

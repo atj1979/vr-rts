@@ -1,0 +1,43 @@
+{
+  "id": "fluxwell",
+  "category": "resources",
+  "footprint": [
+    2,
+    2
+  ],
+  "boundingRadius": 0.9,
+  "attachments": {
+    "muzzle": [
+      0,
+      0.9,
+      0
+    ],
+    "carry": [
+      0,
+      0.4,
+      0.4
+    ],
+    "selection_ring": [
+      0,
+      0.03,
+      0
+    ]
+  },
+  "lods": [
+    "fluxwell_lod0",
+    "fluxwell_lod1"
+  ],
+  "animations": [
+    "idle",
+    "walk",
+    "run",
+    "attack",
+    "death",
+    "build",
+    "gather",
+    "work"
+  ],
+  "facing": "+Z",
+  "up": "+Y",
+  "units": "meters"
+}

@@ -1,0 +1,207 @@
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: #12151c;
+  color: #f4efe4;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #app {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+canvas.view {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+#hud {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+#hud.vr .topbar,
+#hud.vr .side,
+#hud.vr .dock,
+#hud.vr .toast {
+  display: none;
+}
+
+.topbar, .side, .dock, .banner, .toast, .marquee {
+  pointer-events: auto;
+}
+
+.topbar {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 10px 14px;
+  background: rgba(16, 18, 24, 0.78);
+  border: 1px solid rgba(227, 155, 58, 0.45);
+  clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
+  backdrop-filter: blur(8px);
+}
+
+.crest {
+  width: 36px;
+  height: 36px;
+  background:
+    linear-gradient(#7ecfc4, #7ecfc4) center / 14px 14px no-repeat,
+    conic-gradient(from 20deg, #e39b3a, #7ecfc4, #e39b3a);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+.title { font-weight: 700; letter-spacing: 0.14em; font-size: 14px; }
+.subtitle { color: #e39b3a; font-size: 12px; }
+
+.stocks { display: flex; gap: 14px; font-size: 14px; }
+.stocks b { font-variant-numeric: tabular-nums; }
+.stocks i { display: inline-block; width: 8px; height: 8px; margin-right: 4px; }
+.shard { background: #7ef0e4; }
+.flux { background: #ff7ad9; }
+
+.backend { color: #9aa3ad; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; }
+
+.side {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#minimap {
+  width: 168px;
+  height: 168px;
+  border: 1px solid rgba(227, 155, 58, 0.5);
+  background: #0e1016;
+  cursor: crosshair;
+}
+
+.selection {
+  background: rgba(16, 18, 24, 0.78);
+  border: 1px solid rgba(126, 207, 196, 0.35);
+  padding: 10px;
+  font-size: 13px;
+  line-height: 1.35;
+  min-height: 64px;
+}
+
+.dock {
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: rgba(16, 18, 24, 0.8);
+  border: 1px solid rgba(227, 155, 58, 0.35);
+}
+
+.cmd {
+  pointer-events: auto;
+  appearance: none;
+  border: 1px solid rgba(227, 155, 58, 0.7);
+  background: #241c14;
+  color: #f4efe4;
+  min-width: 92px;
+  padding: 8px 10px 6px;
+  cursor: pointer;
+  clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.cmd span { font-size: 13px; font-weight: 650; }
+.cmd small { color: #c9b89a; font-size: 11px; }
+.cmd kbd { color: #7ecfc4; font-size: 10px; font-family: inherit; }
+.cmd:hover { background: #3a2c1c; }
+
+.toast {
+  position: absolute;
+  top: 92px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(80, 28, 28, 0.9);
+  border: 1px solid #ff8f8f;
+  padding: 8px 14px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.toast.show { opacity: 1; }
+
+.banner {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(8, 10, 14, 0.55);
+  text-align: center;
+}
+
+.banner.hidden { display: none; }
+
+.banner h2 { font-size: 40px; margin: 0 0 8px; letter-spacing: 0.04em; }
+.banner button {
+  margin-top: 12px;
+  background: #e39b3a;
+  color: #1a1208;
+  border: 0;
+  padding: 10px 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.marquee {
+  display: none;
+  position: fixed;
+  border: 1px solid #f0c27a;
+  background: rgba(227, 155, 58, 0.15);
+  pointer-events: none;
+}
+
+body > button {
+  font-family: inherit !important;
+  border-radius: 0 !important;
+  background: #e39b3a !important;
+  color: #1a1208 !important;
+  border: 0 !important;
+  font-weight: 700 !important;
+  left: auto !important;
+  right: 230px !important;
+  bottom: auto !important;
+  top: 16px !important;
+  width: auto !important;
+  min-width: 140px;
+  padding: 8px 12px !important;
+}
+
+.help {
+  position: absolute;
+  left: 16px;
+  bottom: 18px;
+  width: 240px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #d5d0c6;
+  background: rgba(16, 18, 24, 0.72);
+  padding: 10px 12px;
+  pointer-events: none;
+}
+
+#hud.vr .help { display: none; }
